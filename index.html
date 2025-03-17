@@ -1,23 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Portfólio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <nav class="navebar"> 
-            <h1 class="nome"> Vinicius Girato Moresqui</h1>
-            <a class="logo" href="/">Tiger Codes</a>
+        <nav> 
+            <a class="logo" href="/">Portfólio</a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
             <ul class="nav-list">
-                <li><a href="/">Inicio</a></li>
+                <li><a href="/">Início</a></li>
                 <li><a href="/">Sobre</a></li>
-                <li><a href="/"">Projetos</a></li>
-                <li><a href="/">Contados</a></li>
+                <li><a href="/">Projetos</a></li>
+                <li><a href="#contatos">Contatos</a></li>
             </ul>
         </nav>
     </header>
+
+    <main>
+        <section class="container">
+            <div class="about">
+                <img src="foto.jpg" alt="Minha Foto">
+                <p>Olá! Sou Vinícius Girato Moresqui, estudante do terceiro semestre de Análise e Desenvolvimento de Sistemas (ADS) . Gosto de tecnologia e estou sempre buscando aprender mais para melhorar minhas habilidades em programação. Atualmente, estudo e prática Java, C, HTML, CSS e JavaScript , focando não apenas na teoria, mas também na criação de projetos práticos. Meu objetivo é evoluir como desenvolvedor, aprendendo sobre desenvolvimento web, programação orientada a objetos e boas práticas de código.</p>
+            </div>
+
+            <div class="gif-container">
+                <p>Confira meu trabalho!</p>
+                <img src="link-zelda-snes-net.gif" alt="GIF animado">
+            </div>
+        </section>
+
+        <section class="links">
+            <h2>Meus Links</h2>
+            <a href="https://github.com/ViniciusMoresqui" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/vinicius-girato-moresqui-0a3529291/" target="_blank">LinkedIn</a>
+        </section>
+    </main>
+
+    <footer id="contatos">
+        <h2>Contatos</h2>
+        <p>Email: viniciusgiratomoresqui@gmail.com</p>
+        <p>Telefone: (44) 98868-8764</p>
+    </footer>
+
+    <script src="mobile-navbar.js" defer></script>
 </body>
 </html>

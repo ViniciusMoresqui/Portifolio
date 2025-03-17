@@ -1,12 +1,15 @@
-.nome{
-color: white;
-}
-
-
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: Arial, sans-serif;
+    background: url('seu-fundo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
 }
 
 a {
@@ -15,37 +18,148 @@ a {
     transition: 0.3s;
 }
 
-a: houver{
+a:hover {
     opacity: 0.7;
 }
 
-.logo {
-    font-size: 24px;
-    text-decoration: uppercase;
-    letter-spacing: 4px;
-}
-
-nav{
+nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #23232e;
+    background-color: rgba(35, 35, 46, 0.9);
     height: 8vh;
+    padding: 0 20px;
 }
 
-main {
-    background: url("photo-1542831371-29b0f74f9713.jpeg") no-repeat center center;
-    background-size: cover;
-    height: 92vh;
-}
-
-.nav-list{
+.nav-list {
     list-style: none;
     display: flex;
 }
 
-.nav-list li{
-    letter-spacing: 3px;
-    margin-left: 32px;
+.nav-list li {
+    letter-spacing: 2px;
+    margin-left: 20px;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background-color: #fff;
+    margin: 8px;
+}
+
+/* Organização principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+}
+
+/* Estilização das Divs */
+.about, .gif-container {
+    background-color: rgba(42, 42, 58, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    width: 40%;
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+/* Imagem de perfil */
+.about img {
+    width: 180px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* GIF */
+.gif-container img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+/* Seção de Links */
+.links {
+    margin-top: 30px;
+}
+
+.links h2 {
+    margin-bottom: 15px;
+}
+
+.links a {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 15px;
+    background: rgba(35, 35, 46, 0.9);
+    border-radius: 8px;
+}
+
+/* Rodapé */
+footer {
+    background: rgba(42, 42, 58, 0.9);
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about, .gif-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 999px) {
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        left: 0;
+        width: 60vw;
+        height: 92vh;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-list.active {
+        transform: translateX(0);
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .mobile-menu.active .line1 {
+        transform: rotate(-45deg) translate(-5px, 8px);
+    }
+
+    .mobile-menu.active .line2 {
+        opacity: 0;
+    }
+
+    .mobile-menu.active .line3 {
+        transform: rotate(45deg) translate(-5px, -7px);
+    }
 }
