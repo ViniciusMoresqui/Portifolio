@@ -4,13 +4,15 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: Arial, sans-serif;
     background: url('istockphoto-1250984508-612x612.jpg') no-repeat center center fixed;
     background-size: cover;
     color: white;
 }
-
 
 body::before {
     content: "";
@@ -53,6 +55,31 @@ nav {
     text-decoration: none;
     color: white;
     font-size: 18px;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 3px;
+    background: white;
+    margin: 6px;
+    transition: transform 0.3s;
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-5px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
 }
 
 .descricao {
@@ -109,10 +136,10 @@ footer {
     background-color: rgba(22, 33, 62, 0.8);
     text-align: center;
     padding: 20px;
-    margin-top: 20px;
+    width: 100%;
+    margin-top: auto;
 }
 
-/* 🔹 Responsividade para Mobile */
 @media (max-width: 999px) {
     .nav-list {
         position: absolute;
@@ -134,17 +161,5 @@ footer {
 
     .mobile-menu {
         display: block;
-    }
-
-    .mobile-menu.active .line1 {
-        transform: rotate(-45deg) translate(-5px, 8px);
-    }
-
-    .mobile-menu.active .line2 {
-        opacity: 0;
-    }
-
-    .mobile-menu.active .line3 {
-        transform: rotate(45deg) translate(-5px, -7px);
     }
 }
